@@ -1,0 +1,54 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b2e4a, #e84545);
+    color: white;
+    animation: fadeIn 1s ease-in;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px #000;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .glow-button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 115, 255, 0.4);
+    cursor: pointer;
+    transform: perspective(600px) rotateX(10deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .glow-button:hover {
+    transform: perspective(600px) rotateX(0deg) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 115, 255, 0.7);
+  }
+  
+  /* Entrance animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
